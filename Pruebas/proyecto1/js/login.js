@@ -9,14 +9,22 @@ function validarFormulario(){
         var usuario = $("#usuario").val();
         var pass = $("#pass").val();
 
-        if(usuario=="user"){
-            if(pass=="pass"){
-                alert('formulario valido');
+        if(usuario!=''){
+            if(usuario=="user"){
+                if(pass!=''){
+                    if(pass=="pass"){
+                        alert('DATOS CORRECTOS!');
+                    }else{
+                        alert('contraseña no valida');
+                    }
+                }else{
+                    alert('Debe ingresar la contraseña');
+                }
             }else{
-                alert('contraseña no valida');
+                alert('usuario no valido');
             }
         }else{
-            alert('usuario no valido');
+            alert('Ingrese el usuario');  
         }
     })
 }
